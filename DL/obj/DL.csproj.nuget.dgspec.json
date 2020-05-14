@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Call-Productivity\\DL\\DL.csproj": {}
+    "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj": {}
   },
   "projects": {
-    "C:\\Call-Productivity\\DL\\DL.csproj": {
+    "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Call-Productivity\\DL\\DL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj",
         "projectName": "DL",
-        "projectPath": "C:\\Call-Productivity\\DL\\DL.csproj",
-        "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
-        "outputPath": "C:\\Call-Productivity\\DL\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Call-Productivity\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Call-Productivity\\Entities\\Entities.csproj"
+              "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj"
               }
             }
           }
@@ -66,21 +69,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Call-Productivity\\Entities\\Entities.csproj": {
+    "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Call-Productivity\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
-        "outputPath": "C:\\Call-Productivity\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

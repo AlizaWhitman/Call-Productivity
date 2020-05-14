@@ -14,7 +14,7 @@ namespace YY_Project.Controllers
     public class CallsSummaryController : ControllerBase
     {
         ICallsSummaryBL _ICallsSummaryBL;
-
+        // IWNAT TO SEE THIS BY MEEEEEEEEEE
         // Dependency Injection
         public CallsSummaryController(ICallsSummaryBL CallsSummaryBL)
         {
@@ -39,6 +39,7 @@ namespace YY_Project.Controllers
         [HttpPost]
         public void Post([FromBody] CallsSummary cs)
         {
+            int justToSee = 9;
             _ICallsSummaryBL.PostCallsSummary(cs);
         }
 
