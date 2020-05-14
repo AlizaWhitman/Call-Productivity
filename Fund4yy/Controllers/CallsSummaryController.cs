@@ -39,7 +39,9 @@ namespace YY_Project.Controllers
         [HttpPost]
         public void Post([FromBody] CallsSummary cs)
         {
+            int seeme = 0;
             _ICallsSummaryBL.PostCallsSummary(cs);
+            seeme++;
         }
 
         //// PUT: api/CallsSummary/5
