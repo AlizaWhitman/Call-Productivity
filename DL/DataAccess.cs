@@ -30,8 +30,7 @@ namespace DL
         public SheetsService Service { get => service; set => service = value; }
 
         public void Connect()
-        {
-
+        { 
             _logger.LogInformation("a connection is being made");
             try
             {
@@ -62,6 +61,7 @@ namespace DL
             }
 
         }
+
 
     }
 }

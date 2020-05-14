@@ -83,7 +83,7 @@ export class MemberLoginComponent implements OnInit {
 
   Confirmation() {
     if (this._confirmationCode.code == this._confirmationCodeEntered) {
-      this._router.navigate(['/MemberNewComponent']);
+      this._router.navigate(['/HomePage']);
 
     }
     else {

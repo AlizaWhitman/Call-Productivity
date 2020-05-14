@@ -6,3 +6,11 @@ C:\Fund4yy\Entities\bin\Debug\netcoreapp3.1\Entities.dll
 C:\Fund4yy\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
 C:\Fund4yy\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Fund4yy\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Call-Productivity\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Call-Productivity\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Call-Productivity\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

@@ -26,7 +26,6 @@ namespace Fund4yy
         {
             _callSessionBL = callSessionBL;
             _logger = logger;
-            _callSessionBL.A();
             return _next(httpContext);
         }
     }

@@ -6,6 +6,5 @@ namespace BL
 {
     public interface ICallSessionBL
     {
-        public void A();
     }
 }

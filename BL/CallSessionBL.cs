@@ -7,15 +7,11 @@ namespace BL
 {
     public class CallSessionBL: ICallSessionBL
     {
-        private ILogger<CallSessionBL> _logger;
-        public CallSessionBL(ILogger<CallSessionBL> logger)
+        public CallSessionBL()
         {
-            _logger = logger;
+       
         }
-        public void A()
-        {
-            _logger.LogInformation("WOW");
-        }
+
     }
 
 }

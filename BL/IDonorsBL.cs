@@ -9,5 +9,6 @@ namespace BL
     {
         Boolean PostDonor(Donors Donor);
         List<DonorsList> GetAllDonors();
+        
     }
 }

@@ -35,8 +35,11 @@ namespace Fund4yy
             services.AddScoped(typeof(ICallsSummaryBL), typeof(CallsSummaryBL));
             services.AddScoped(typeof(ICallsSummaryDL), typeof(CallsSummaryDL));
             services.AddSingleton<DataAccess>();
+            services.AddSingleton<Program>();
             services.AddScoped(typeof(IMembersDL), typeof(MembersDL));
             services.AddScoped(typeof(ICallSessionBL), typeof(CallSessionBL));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

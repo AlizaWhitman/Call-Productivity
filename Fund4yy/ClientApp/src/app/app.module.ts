@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DonorsService } from './donors.service';
 import { CallsService } from './calls-service';
 import { MembersService } from './members.service';
+import { CallSessionComponent } from './call-session/call-session.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MembersService } from './members.service';
     DonorNewComponent,
     MemberDetailsComponent,
     MemberNewComponent,
-    MemberLoginComponent
+    MemberLoginComponent,
+    CallSessionComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
