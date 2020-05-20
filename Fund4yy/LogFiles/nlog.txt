@@ -900,3 +900,42 @@ Module Error (from ./node_modules/postcss-loader/src/index.js):
 2020-05-14 18:15:46.9012|INFO|DL.MembersDL|GOT TO GETMEMBER AT DL FOR alizawhitman2020@gmail.com
 2020-05-14 18:15:47.9459|INFO|DL.MembersDL|FOUND MEMBER AND IS ABOUT TO RETURN FROM DL
 2020-05-14 18:15:49.4626|INFO|DL.DataAccess|a connection is being made
+2020-05-17 14:26:37.1329|INFO|DL.DataAccess|a connection is being made
+2020-05-17 14:26:45.1745|ERROR|Fund4yy.Program|An error occurred.
+2020-05-17 14:26:45.5250|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-05-17 14:26:45.5669|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-05-17 14:26:45.5816|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Call-Productivity\Fund4yy
+2020-05-17 14:26:55.9836|ERROR|Microsoft.AspNetCore.SpaServices|Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+
+2020-05-17 14:27:33.4404|INFO|DL.DataAccess|a connection is being made
+2020-05-17 14:27:33.5280|INFO|YY_Project.Controllers.MembersController|LOG IN: alizawhitman2020@gmail.com PASSWORD: 1
+2020-05-17 14:27:33.5445|INFO|DL.MembersDL|GOT TO GETMEMBER AT DL FOR alizawhitman2020@gmail.com
+2020-05-17 14:27:34.7875|INFO|DL.MembersDL|FOUND MEMBER AND IS ABOUT TO RETURN FROM DL
+2020-05-17 14:27:41.6046|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:34:52.5510|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:34:59.9760|ERROR|Fund4yy.Program|An error occurred.
+2020-05-21 00:35:01.3494|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-05-21 00:35:01.4296|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-05-21 00:35:01.5133|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Call-Productivity\Fund4yy
+2020-05-21 00:35:14.2489|ERROR|Microsoft.AspNetCore.SpaServices|Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+
+2020-05-21 00:41:50.1474|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:42:22.5278|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:51:53.3701|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:55:50.9554|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:58:24.3876|INFO|DL.DataAccess|a connection is being made
+2020-05-21 00:59:37.1917|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:00:06.5136|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:04:17.4044|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:06:04.5333|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:06:55.7033|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:11:12.7320|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:11:42.6686|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:27:31.9944|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:28:17.0159|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:50:47.5948|INFO|DL.DataAccess|a connection is being made
+2020-05-21 01:50:53.2131|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-05-21 01:50:53.2380|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-05-21 01:50:53.2513|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Call-Productivity\Fund4yy
+2020-05-21 01:51:02.2777|ERROR|Microsoft.AspNetCore.SpaServices|Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+
