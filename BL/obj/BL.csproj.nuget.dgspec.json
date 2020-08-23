@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Call-Productivity\\BL\\BL.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Call-Productivity\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
         "outputPath": "C:\\Call-Productivity\\BL\\obj\\",
+=======
+    "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj",
+        "projectName": "BL",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\obj\\",
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +41,13 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Call-Productivity\\DL\\DL.csproj": {
                 "projectPath": "C:\\Call-Productivity\\DL\\DL.csproj"
+=======
+              "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj"
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
               }
             }
           }
@@ -41,6 +60,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,6 +77,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -60,6 +88,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Call-Productivity\\DL\\DL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -68,6 +97,16 @@
         "projectPath": "C:\\Call-Productivity\\DL\\DL.csproj",
         "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
         "outputPath": "C:\\Call-Productivity\\DL\\obj\\",
+=======
+    "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj",
+        "projectName": "DL",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\obj\\",
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +122,13 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Call-Productivity\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Call-Productivity\\Entities\\Entities.csproj"
+=======
+              "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj"
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
               }
             }
           }
@@ -105,6 +149,10 @@
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
             }
           },
           "imports": [
@@ -118,6 +166,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -126,6 +177,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Call-Productivity\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -134,6 +186,16 @@
         "projectPath": "C:\\Call-Productivity\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
         "outputPath": "C:\\Call-Productivity\\Entities\\obj\\",
+=======
+    "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\obj\\",
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -159,6 +221,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -170,6 +238,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

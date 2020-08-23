@@ -24,7 +24,7 @@ namespace Fund4yy
 
         public  Task Invoke(HttpContext httpContext, ILogger<ErrorHandlingMiddleware> logger, ICallSessionBL callSessionBL)
         {
-            _callSessionBL = callSessionBL;
+            //_callSessionBL = callSessionBL;
             _logger = logger;
             return _next(httpContext);
         }

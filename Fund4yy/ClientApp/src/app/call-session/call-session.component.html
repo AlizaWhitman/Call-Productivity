@@ -1,1 +1,173 @@
-<p>call-session works!</p>
+<div class="member-details-wrap">
+	<div class="member-details-html">	
+		<div class="member-details-form">
+            <label class="member-details">Your Next Call</label>
+			<form [formGroup]="donerDetailsForm">
+			<div class="member-details-htm">
+				<div class="group">
+					<label for="firstName" class="label">First Name</label>
+					<input id="firstName" type="text" class="input" formControlName="firstName">
+				</div>
+				<div class="group">
+					<label for="lastName" class="label">Last Name</label>
+					<input id="lastName" type="text" class="input" formControlName="lastName">
+				</div>
+				<!-- <div class="group">
+					<label for="ageGroup" class="label">Age Group</label>
+					<input id="ageGroup" type="text" class="input" formControlName="ageGroup">
+				</div> -->
+				<!-- NEEDS TO BE A SELECT LIST OF THE -->
+				<div class="group">
+					<label for="email" class="label">Email</label>
+					<input id="email"  class="input" formControlName="email">
+				</div>
+				<div class="group">
+					<label for="phoneNumber" class="label">Phone Number</label>
+					<input id="phoneNumber" type="text" class="input" formControlName="phoneNumber">
+				</div>
+				<div class="group">
+					<label for="country" class="label">Country</label>
+					<input id="country" type="text" class="input" formControlName="country">
+				</div>
+				<div class="group">
+					<label for="city" class="label">City</label>
+					<input id="city" type="text" class="input" formControlName="city">
+                </div>
+                <div class="group">
+					<label for="nativeLanguage" class="label">nativeLanguage</label>
+					<input id="nativeLanguage" type="text" class="input" formControlName="nativeLanguage">
+				</div>
+                <div class="group">
+					<label for="totalDonation" type="number" class="label"> totalDonation</label>
+					<input id="totalDonation" type="number" class="input" formControlName="totalDonation">
+				</div>
+                <div class="group">
+					<label for="lastDonation" type="number" class="label"> lastDonation</label>
+					<input id="lastDonation" type="number" class="input" formControlName="lastDonation">
+                </div>
+                <!-- <div class="group">
+					<input id="vip" type="checkbox" class="input" class="check" formControlName="vip">
+					<label for="vip"><span class="icon"></span> vip </label>
+				</div>
+				<div class="group">
+					<input id="anashIsrael" type="checkbox" class="input" class="check" formControlName="anashIsrael">
+					<label for="anashIsrael"><span class="icon"></span> Anash Israel </label>
+				</div>
+				<div class="group">
+					<input id="anashUSA" type="checkbox" class="input" class="check" formControlName="anashUSA">
+					<label for="anashUSA"><span class="icon"></span> Anash Usa</label>
+				</div>
+				<div class="group">
+					<input id="pinskSchoolGraduate" type="checkbox" class="input" class="check" formControlName="pinskSchoolGraduate">
+					<label for="pinskSchoolGraduate"><span class="icon"></span> Pinsk School Graduate</label>
+				</div>
+				<div class="group">
+					<input id="kievSchoolGraduate" type="checkbox" class="input" class="check" formControlName="kievSchoolGraduate">
+					<label for="kievSchoolGraduate"><span class="icon"></span> Kiev School Graduate</label>
+				</div>
+				<div class="group">
+					<input id="yeshivaGraduate" type="checkbox" class="input" class="check" formControlName="yeshivaGraduate">
+					<label for="yeshivaGraduate"><span class="icon"></span> Yeshiva Graduate</label>
+				</div>
+				<div class="group">
+					<input id="inPinsk" type="checkbox" class="input" class="check" formControlName="inPinsk">
+					<label for="inPinsk"><span class="icon"></span> Currently in Pinsk</label>
+				</div>
+				<div class="group">
+					<input id="businessAssociate" type="checkbox" class="input" class="check" formControlName="businessAssociate">
+					<label for="businessAssociate"><span class="icon"></span> Business Associate</label>
+				</div>
+				<div class="group">
+					<input id="boysCounselor" type="checkbox" class="input" class="check" formControlName="boysCounselor">
+					<label for="boysCounselor"><span class="icon"></span> Boys Counselor in the past</label>
+				</div>
+				<div class="group">
+					<input id="girlsCounselor" type="checkbox" class="input" class="check" formControlName="girlsCounselor">
+					<label for="girlsCounselor"><span class="icon"></span> Girls Counselor in the past</label>
+				</div>
+				<div class="group">
+					<input id="helpedByPinsk" type="checkbox" class="input" class="check" formControlName="helpedByPinsk">
+					<label for="helpedByPinsk"><span class="icon"></span> Helped By Pinsk</label>
+				</div>
+				<div class="group">
+					<input id="generalSupporter" type="checkbox" class="input" class="check" formControlName="generalSupporter">
+					<label for="generalSupporter"><span class="icon"></span> General Supporter</label>
+				</div>
+				<div class="group">
+					<input id="mhsg" type="checkbox" class="input" class="check" formControlName="mhsg">
+					<label for="mhsg"><span class="icon"></span> MHSG</label>
+				</div>
+				<div class="group">
+					<input id="belarusAnsectors" type="checkbox" class="input" class="check" formControlName="belarusAnsectors">
+					<label for="belarusAnsectors"><span class="icon"></span> Belarus Ansectors</label>
+				</div>
+				<div class="group">
+					<input id="belarusTourism" type="checkbox" class="input" class="check" formControlName="belarusTourism">
+					<label for="belarusTourism"><span class="icon"></span> Belarus Tourism</label>
+				</div>
+				<div class="group">
+					<input id="yyFundraiser" type="checkbox" class="input" class="check" formControlName="yyFundraiser">
+					<label for="yyFundraiser"><span class="icon"></span> Yad Yisroel Fundraiser</label>
+				</div>
+				<div class="group">
+					<input id="yyFamily" type="checkbox" class="input" class="check" formControlName="yyFamily">
+					<label for="yyFamily"><span class="icon"></span> Yad Yisroel Family Member</label>
+				</div>
+				<div class="group">
+					<input id="yyStaff" type="checkbox" class="input" class="check" formControlName="yyStaff">
+					<label for="yyStaff"><span class="icon"></span> Yad Yisroel Staff Member</label>
+				</div>
+				<div class="group">
+					<input id="rShteiermanFamily" type="checkbox" class="input" class="check" formControlName="rShteiermanFamily">
+					<label for="rShteiermanFamily"><span class="icon"></span> R Shteierman Family Member</label>
+				</div>
+	
+				<div class="group">
+					<input id="rFimaFamily" type="checkbox" class="input" class="check" formControlName="rFimaFamily">
+					<label for="rFimaFamily"><span class="icon"></span> R Fima Family Member</label>
+				</div>
+				<div class="group">
+					<input id="marriedAYYGraduate" type="checkbox" class="input" class="check" formControlName="marriedAYYGraduate">
+					<label for="marriedAYYGraduate"><span class="icon"></span> Married to a Yad Yisroel Graduate</label>
+				</div>
+				<div class="group">
+					<label for="yearsInYadYisroel" class="label">Number of years in the organization</label>
+					<input id="yearsInYadYisroel" type="number" class="input" formControlName="yearsInYadYisroel">
+				</div>
+				<div class="group">
+					<label for="other" class="label">Anything else you would like to share?</label>
+					<input id="other" type="text" class="input" formControlName="other">
+				</div> -->
+				<div class="hr"></div>
+				<div class="group">
+					<input type="submit" class="button" value="Reseived a donation" (click)="ReseivedDonation()">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Nobody answered"(click)="NobodyAnswered()">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Wrong number"(click)="WrongNumber()">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value='"Call me back!"'(click)="CallBack()">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value='"Sorry, but no"'(click)="SorryNo()">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Never again!!!!"(click)="NeverAgain()">
+				</div>
+				<div class="foot-lnk">
+					<a [routerLink]="['/MemberDetailsComponent']">Personal Details</a>
+				</div>
+				<div class="foot-lnk">
+					<a [routerLink]="['/DonorNewComponent']">Add New Donor</a>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+

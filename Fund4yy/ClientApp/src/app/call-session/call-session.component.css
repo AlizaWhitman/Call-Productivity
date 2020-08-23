@@ -1,0 +1,214 @@
+.ng-invalid:not(form) {
+    background-color:rgb(255, 0, 191);
+}
+.ng-valid:not(form) {
+    background-color: rgb(73, 147, 216);
+}
+
+body{
+	margin:0;
+
+	border-color: hotpink;
+	border-width: thick;
+	/* background:#c8c8c8; */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font:small-caps;
+	
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.member-details-wrap{
+	color:lightgray;
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:2200px;
+	position:relative;
+	background-color: white;
+	border-color: hotpink;
+	border-width: thick;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.member-details{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+	border-color: hotpink;
+	border-width: thick;
+    color:gray;
+}
+.member-details-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:white;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-html .sign-in-htm,
+.member-details-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+	border-color: hotpink;
+	border-width: thick;
+	
+}
+.member-details-html .sign-in,
+.member-details-html .sign-up,
+.member-details-form .group .check{
+	display:none;
+	border-color: hotpink;
+	border-width: thick;
+	
+}
+.member-details-html .tab,
+.member-details-form .group .label,
+.member-details-form .group .button{
+	text-transform:uppercase;
+}
+.member-details-html .tab{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-html .sign-in:checked + .tab,
+.member-details-html .sign-up:checked + .tab{
+	color:gray;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+	border-color: hotpink;
+	border-width: thick;
+
+}
+.member-details-form .group{
+	margin-bottom:15px;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-form .group .label,
+.member-details-form .group .input,
+.member-details-form .group .button{
+	width:100%;
+	color:black;
+	display:block;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-form .group .input,
+.member-details-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	border-color: hotpink;
+	border-width: thick;
+	background:whitesmoke;
+}
+.member-details-form .group input[data-type="password"]{
+color: gray;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	-webkit-text-security:circle;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-form .group .label{
+	color:gray;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:12px;
+	border-color: hotpink;
+	border-width: thick;
+}
+.member-details-form .group .button{
+	background:hotpink;
+	color:whitesmoke;
+}
+.member-details-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	border-color: hotpink;
+	border-width: thick;
+	background:hotpink;
+}
+.member-details-form .group label .icon:before,
+.member-details-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:white;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.member-details-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.member-details-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.member-details-form .group .check:checked + label{
+	color:gray
+}
+.member-details-form .group .check:checked + label .icon{
+	background:hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.member-details-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.member-details-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.member-details-html .sign-in:checked + .tab + .sign-up + .tab + .member-details-form .sign-in-htm{
+	transform:rotate(0);
+}
+.member-details-html .sign-up:checked + .tab + .member-details-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	border-color: hotpink;
+	border-width: thick;
+	background:hotpink;
+
+}
+.foot-lnk{
+	text-align:center;
+	border-color: hotpink;
+	border-width: thick;
+	
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
