@@ -83,7 +83,7 @@ export class MemberLoginComponent implements OnInit {
 
   Confirmation() {
     if (this._confirmationCode.code == this._confirmationCodeEntered) {
-      this._router.navigate(['/HomePage']);
+      this._router.navigate(['/MemberNewComponent']);
 
     }
     else {
@@ -101,7 +101,7 @@ export class MemberLoginComponent implements OnInit {
       if (data) {
         sessionStorage.setItem("currentMember", JSON.stringify(data));
         this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
-        this._router.navigate(['/CallSummaryComponent']);
+        this._router.navigate(['/HomePage']);
         alert("Welcome back " + data.firstName + " 😊");
       }
       else {

@@ -17,21 +17,13 @@ namespace Fund4yy
 {
     public class Program
     {
-
-        
         static DataAccess _Connection;
         static int numOfCallsPerHour = 10;
         static int hoursOfDonating = 24;
+        static Boolean flag = false;
         static public Dictionary<string, List<Donors>> fundraisersConnection =
         new Dictionary<string, List<Donors>>();
-        public List<Donors> getFundraisersDonors(string Id)
-        {
-            List<Donors> listOfDonors;
-            fundraisersConnection.TryGetValue(Id, out listOfDonors);
-            if (listOfDonors.Count < numOfCallsPerHour)
-                return listOfDonors;
-           return listOfDonors.GetRange(0, numOfCallsPerHour);
-        }
+ 
         public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
@@ -138,7 +130,36 @@ namespace Fund4yy
             }
             await host.RunAsync();
         }
+         public List<Donors> getFundraisersDonors(string name)
+        {
+            List<Donors> listOfDonors;
+            fundraisersConnection.TryGetValue(name, out listOfDonors);
 
+            if (flag==false)
+            {
+                flag = true;
+            }
+            else
+            {
+                listOfDonors.RemoveRange(0, numOfCallsPerHour);
+            }
+            
+            if (listOfDonors.Count < numOfCallsPerHour)
+                return listOfDonors;
+            return listOfDonors.GetRange(0, numOfCallsPerHour);
+         }
+        public bool removeDonorToEnd(int donor, string member)
+        {
+            Donors donorSelected;
+            List<Donors> listOfDonors;
+            fundraisersConnection.TryGetValue(member, out listOfDonors);
+            int lenth = listOfDonors.Count();
+            donorSelected = listOfDonors.Find(e => e.ID == donor.ToString());
+            listOfDonors.Remove(donorSelected);
+            listOfDonors.Insert(lenth - 1, donorSelected);
+            return true;
+
+        }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

@@ -7,6 +7,8 @@ import { DonorsList } from '../models/donors-list-model';
 import { CallsSummary } from '../models/call-summary-model';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Member } from '../models/member-model';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-call-summary',
@@ -18,6 +20,8 @@ export class CallSummaryComponent implements OnInit {
   allDonors: DonorsList[]
   private _newCallSummary: CallsSummary
   private _currentMember: Member;
+  private _donorName :string;
+  private _donorID :string;
 
   CallSummaryForm: FormGroup = new FormGroup({
     charity: new FormControl(""),
@@ -58,21 +62,40 @@ export class CallSummaryComponent implements OnInit {
     this._newCallSummary.location = sessionStorage.getItem("Location");
     this._newCallSummary.fID = this._currentMember.id;
     this._newCallSummary.fFullName = this._currentMember.fullName;
+    this._donorID=JSON.parse(sessionStorage.getItem("dID"))
+    this._newCallSummary.dID = this._donorID;
     this._callsService.saveCall(this._newCallSummary).subscribe();
     alert("Call submitted. Thank you!!! 😊🤩😄")
     this.CallSummaryForm.reset();
+    this._router.navigate(["/CallSessionComponent"])
+
   }
 
-  constructor(private _callsService: CallsService) {
+  constructor(private _callsService: CallsService, private _acr :ActivatedRoute,private _router: Router) {
    }
 
   ngOnInit() {
-    this.getLocation();
+   if(sessionStorage.getItem("dName"))
+   {
     this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
-    this._callsService.getDonors().subscribe((data) => {
-      this.allDonors = data;
-    }, err => {
-      alert("We are having difficulties reveiving the list of donors. Please try again later.");
-    })
+    this._donorName=JSON.parse(sessionStorage.getItem("dName"))
+    this.CallSummaryForm.get('dFullName').setValue(this._donorName)
+   }
+   else
+   {
+    this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
+    this._acr.params.forEach((urlParams) => { this._donorName= urlParams['name']; this._donorID=urlParams['dID']; });
+    this.CallSummaryForm.get('dFullName').setValue(this._donorName)
+    sessionStorage.setItem("dName", JSON.stringify(this._donorName))
+    sessionStorage.setItem("dID", JSON.stringify(this._donorID))
+
+  }
+    // this._callsService.getDonors().subscribe((data) => {
+    //   debugger
+    //   this.allDonors = data;
+    //   debugger
+    // }, err => {
+    //   alert("We are having difficulties reveiving the list of donors. Please try again later.");
+    // })
   }
 }

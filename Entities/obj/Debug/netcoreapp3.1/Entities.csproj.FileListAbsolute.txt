@@ -14,3 +14,12 @@ C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInput
 C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\User\Documents\Call-Productivity\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Users\User\Documents\Call-Productivity\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\User\Documents\Call-Productivity\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\User\Documents\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Users\User\Documents\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Users\User\Documents\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Users\User\Documents\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\User\Documents\Call-Productivity\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache

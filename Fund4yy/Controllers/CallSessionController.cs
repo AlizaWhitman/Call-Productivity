@@ -6,6 +6,7 @@ using Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Fund4yy.Pages;
+using BL;
 
 namespace Fund4yy.Controllers
 {
@@ -16,11 +17,13 @@ namespace Fund4yy.Controllers
         int numOfDonors = 10;
 
         Program _Program;
+        ICallSessionBL _CallSessionBL;
 
         // Dependency Injection
-        public CallSessionController(Program Program)
+        public CallSessionController(Program Program, ICallSessionBL CallSessionBL)
         {
             _Program = Program;
+            _CallSessionBL = CallSessionBL;
         }
 
         // GET: api/CallSession
@@ -30,29 +33,32 @@ namespace Fund4yy.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/CallSession/5
-        [HttpGet("{id}", Name = "Get")]
-        public List<Donors> Get(string id)
+        // GET: api/CallSession
+        [HttpGet("{name}")]
+        public List<Donors> Get(string name)
         {
-            return _Program.getFundraisersDonors(id);
+            return _Program.getFundraisersDonors(name);
         }
-
-        // POST: api/CallSession
-        [HttpPost]
-        public void Post([FromBody] string value)
+        //PUT: api/CallSession/5
+        //[HttpPut()]
+        [HttpPut("{member}/{donor}")]
+        public bool PutDonor(string member, int donor)
         {
+            return _Program.removeDonorToEnd(donor, member);
         }
 
         // PUT: api/CallSession/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public bool Put(int i, string id)
         {
+            return _CallSessionBL.deletePhoneNumber(id);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(string id)
         {
+           return this._CallSessionBL.deletDonor(id);
         }
     }
 }
