@@ -39,12 +39,12 @@ namespace Fund4yy.Controllers
         {
             return _Program.getFundraisersDonors(name);
         }
-
-        // POST: api/CallSession
-        [HttpPost]
-        public void Post([FromBody] Donors donor)
+        //PUT: api/CallSession/5
+        //[HttpPut()]
+        [HttpPut("{member}/{donor}")]
+        public bool PutDonor(string member, int donor)
         {
-            
+            return _Program.removeDonorToEnd(donor, member);
         }
 
         // PUT: api/CallSession/5

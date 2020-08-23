@@ -6,6 +6,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Member } from '../models/member-model';
 import { Router, RouterLink } from '@angular/router';
 import { INT_TYPE } from '@angular/compiler/src/output/output_ast';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-call-session',
@@ -93,28 +94,37 @@ export class CallSessionComponent implements OnInit {
   }
 
   NobodyAnswered(){
+      this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
       this.listOfDonor.reverse();
+      debugger
       this._saveDonor=this.listOfDonor.pop();
       this.listOfDonor.reverse();
-      debugger
-      this._lenList= this.listOfDonor.length
-      this.listOfDonor[this._lenList]= this._saveDonor;
-      debugger
-      sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
-      alert("We will..... your next call..........")
-      this.donerDetailsForm.reset();
-      this.InitializeForm();
+      this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
+      {
 
-  }
+        debugger
+          if(save) {
+            sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
+            this.donerDetailsForm.reset();
+            this.InitializeForm();
+            alert("The donor remove to the end of the list.");
+          }
+          else
+          alert("Unfortunately we had trouble.");
+        }, err => {
+          alert("Unfortunately we had trouble.");
+        });
+     
+    }
 
   WrongNumber(){
- 
     this._callSessionService.deletePhoneNumber(this.listOfDonor[0].id).subscribe((save)=>
     {
       debugger
       if(save) {
         alert("The donor nuber phone was deleted succesfully!😊");
-        sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))   if( this.listOfDonor.length==0)
+        sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor)) 
+        if( this.listOfDonor.length==0)
         {
           debugger
           this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
@@ -141,15 +151,26 @@ export class CallSessionComponent implements OnInit {
   }
 
   CallBack(){
+    this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
     this.listOfDonor.reverse();
+    debugger
     this._saveDonor=this.listOfDonor.pop();
     this.listOfDonor.reverse();
-    this._lenList= this.listOfDonor.length
-    this.listOfDonor[this._lenList]= this._saveDonor;
-    alert("We will..... your next call..........")
-    sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
-    this.donerDetailsForm.reset();
-    this.InitializeForm();
+    this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
+    {
+
+      debugger
+        if(save) {
+          sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
+          this.donerDetailsForm.reset();
+          this.InitializeForm();
+          alert("The donor remove to the end of the list.");
+        }
+        else
+        alert("Unfortunately we had trouble.");
+      }, err => {
+        alert("Unfortunately we had trouble.");
+      });
   }
 
   SorryNo(){

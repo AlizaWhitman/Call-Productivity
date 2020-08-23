@@ -20,6 +20,7 @@ namespace Fund4yy
         static DataAccess _Connection;
         static int numOfCallsPerHour = 10;
         static int hoursOfDonating = 24;
+        static Boolean flag = false;
         static public Dictionary<string, List<Donors>> fundraisersConnection =
         new Dictionary<string, List<Donors>>();
  
@@ -133,11 +134,32 @@ namespace Fund4yy
         {
             List<Donors> listOfDonors;
             fundraisersConnection.TryGetValue(name, out listOfDonors);
+
+            if (flag==false)
+            {
+                flag = true;
+            }
+            else
+            {
+                listOfDonors.RemoveRange(0, numOfCallsPerHour);
+            }
+            
             if (listOfDonors.Count < numOfCallsPerHour)
                 return listOfDonors;
             return listOfDonors.GetRange(0, numOfCallsPerHour);
-        }
+         }
+        public bool removeDonorToEnd(int donor, string member)
+        {
+            Donors donorSelected;
+            List<Donors> listOfDonors;
+            fundraisersConnection.TryGetValue(member, out listOfDonors);
+            int lenth = listOfDonors.Count();
+            donorSelected = listOfDonors.Find(e => e.ID == donor.ToString());
+            listOfDonors.Remove(donorSelected);
+            listOfDonors.Insert(lenth - 1, donorSelected);
+            return true;
 
+        }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
