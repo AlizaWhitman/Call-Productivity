@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BL
+namespace DL
 {
-    public interface ICallSessionBL
+    public interface ICallSessionDL
     {
+
         public bool deletePhoneNumber(string id);
         public bool deletDonor(string id);
     }

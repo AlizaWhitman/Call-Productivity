@@ -17,21 +17,12 @@ namespace Fund4yy
 {
     public class Program
     {
-
-        
         static DataAccess _Connection;
         static int numOfCallsPerHour = 10;
         static int hoursOfDonating = 24;
         static public Dictionary<string, List<Donors>> fundraisersConnection =
         new Dictionary<string, List<Donors>>();
-        public List<Donors> getFundraisersDonors(string Id)
-        {
-            List<Donors> listOfDonors;
-            fundraisersConnection.TryGetValue(Id, out listOfDonors);
-            if (listOfDonors.Count < numOfCallsPerHour)
-                return listOfDonors;
-           return listOfDonors.GetRange(0, numOfCallsPerHour);
-        }
+ 
         public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
@@ -137,6 +128,14 @@ namespace Fund4yy
                 }
             }
             await host.RunAsync();
+        }
+         public List<Donors> getFundraisersDonors(string name)
+        {
+            List<Donors> listOfDonors;
+            fundraisersConnection.TryGetValue(name, out listOfDonors);
+            if (listOfDonors.Count < numOfCallsPerHour)
+                return listOfDonors;
+            return listOfDonors.GetRange(0, numOfCallsPerHour);
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {}
+    "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {
+    "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -51,6 +57,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

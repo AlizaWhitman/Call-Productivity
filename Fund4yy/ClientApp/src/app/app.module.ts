@@ -15,6 +15,7 @@ import { CallsService } from './calls-service';
 import { MembersService } from './members.service';
 import { CallSessionComponent } from './call-session/call-session.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CallSessionService } from './call-session.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [MembersService, DonorsService, CallsService],
+  providers: [MembersService, DonorsService, CallsService, CallSessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

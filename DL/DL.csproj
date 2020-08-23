@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.43.0.1839" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
   </ItemGroup>
 
   <ItemGroup>

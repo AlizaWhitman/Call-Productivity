@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Call-Productivity\\BL\\BL.csproj": {}
+    "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Call-Productivity\\BL\\BL.csproj": {
+    "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Call-Productivity\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\BL\\BL.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\BL\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj"
+              "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj"
               }
             }
           }
@@ -44,6 +44,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,6 +61,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -63,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj": {
+    "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj",
         "projectName": "DL",
-        "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\DL.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\DL\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -89,8 +98,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj"
+              "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj"
               }
             }
           }
@@ -111,6 +120,10 @@
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
             }
           },
           "imports": [
@@ -124,6 +137,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -132,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {
+    "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Call-Productivity\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -168,6 +184,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -179,6 +201,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

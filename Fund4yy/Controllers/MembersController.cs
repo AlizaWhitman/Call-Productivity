@@ -28,6 +28,8 @@ namespace YY_Project.Controllers
             _IMemberBL = MemberBL;
             _logger = logger;
         }
+        
+        //[HttpGet("[action]{Member}")]
         [Route("[action]")]
         public Members LogIn([FromBody] Members Member)
         {
