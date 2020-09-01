@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Member } from '../models/member-model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MembersService } from '../members.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-new',
@@ -17,10 +18,10 @@ export class MemberNewComponent implements OnInit {
     password: new FormControl(""),
     firstName: new FormControl(""),
     lastName: new FormControl(""),
-    confirmed:new FormControl(false),
-    ageGroup:new FormControl(""),
-    email: new FormControl(""),
-    phoneNumber: new FormControl(""),
+    confirmed: new FormControl(false),
+    ageGroup: new FormControl(""),
+    email: new FormControl("", [Validators.required, Validators.email]),
+    phoneNumber: new FormControl("", [Validators.minLength(9)]),
     country: new FormControl(""),
     city: new FormControl(""),
     fluentHebrew: new FormControl(false),
@@ -54,22 +55,22 @@ export class MemberNewComponent implements OnInit {
 
   saveNewMember() {
     this.newMemberForm.get('email').setValue(this._newMember.email);
-    this._newMember= this.newMemberForm.value;
+    this._newMember = this.newMemberForm.value;
     this._newMember.fullName = this._newMember.firstName.concat(this._newMember.lastName);
     this._membersService.saveMember(this._newMember).subscribe(newMember => {
-      if (newMember)
-      {
+      if (newMember) {
         sessionStorage.setItem("currentMember", JSON.stringify(newMember));
-        alert("Welcome " + this._newMember.firstName + "!!! 😄🤗😉 Thank you for joining Yad Yisroel Family ♥" );
+        alert("Welcome " + this._newMember.firstName + "!!! 😄🤗😉 Thank you for joining Yad Yisroel Family ♥");
       }
       else
         alert("Unfortunately we had trouble saving your information. Please sign up later.");
     }, err => {
       alert("Unfortunately we had trouble saving your information. Please sign up later.");
     });
+    this._router.navigate(["/HomePage", { name: this._newMember.firstName }])
   }
 
-  constructor(private _membersService: MembersService) { }
+  constructor(private _membersService: MembersService,private _router: Router) { }
 
   ngOnInit() {
     this._newMember = JSON.parse(sessionStorage.getItem("currentMember"));

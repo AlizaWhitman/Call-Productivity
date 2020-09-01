@@ -101,7 +101,7 @@ export class MemberLoginComponent implements OnInit {
       if (data) {
         sessionStorage.setItem("currentMember", JSON.stringify(data));
         this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
-        this._router.navigate(['/HomePage']);
+        this._router.navigate(["/HomePage", { name: this._currentMember.firstName}])
         alert("Welcome back " + data.firstName + " 😊");
       }
       else {

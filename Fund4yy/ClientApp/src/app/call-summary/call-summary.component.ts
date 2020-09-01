@@ -75,14 +75,17 @@ export class CallSummaryComponent implements OnInit {
    }
 
   ngOnInit() {
-   if(sessionStorage.getItem("dName"))
+  //  if(sessionStorage.getItem("dName"))
+  //  {
+  //    debugger
+  //   this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
+  //   this._donorName=JSON.parse(sessionStorage.getItem("dName"))
+  //   this.CallSummaryForm.get('dFullName').setValue(this._donorName)
+  //   debugger
+  //  }
+  //  else
    {
-    this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
-    this._donorName=JSON.parse(sessionStorage.getItem("dName"))
-    this.CallSummaryForm.get('dFullName').setValue(this._donorName)
-   }
-   else
-   {
+     debugger
     this._currentMember = JSON.parse(sessionStorage.getItem("currentMember"));
     this._acr.params.forEach((urlParams) => { this._donorName= urlParams['name']; this._donorID=urlParams['dID']; });
     this.CallSummaryForm.get('dFullName').setValue(this._donorName)

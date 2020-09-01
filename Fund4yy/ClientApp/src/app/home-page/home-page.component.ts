@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home-page',
@@ -8,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  private _donorName :string;
+  
+  homePageForm: FormGroup = new FormGroup({
+    donorName: new FormControl(""),
+  });
+
+  constructor( private _acr :ActivatedRoute) { }
 
   ngOnInit() {
+    this._acr.params.forEach((urlParams) => { this._donorName= urlParams['name']; });
+    this.homePageForm.get('donorName').setValue(this._donorName)
   }
 
 }

@@ -135,19 +135,19 @@ namespace Fund4yy
             List<Donors> listOfDonors;
             fundraisersConnection.TryGetValue(name, out listOfDonors);
 
-            if (flag==false)
-            {
-                flag = true;
-            }
-            else
-            {
-                listOfDonors.RemoveRange(0, numOfCallsPerHour);
-            }
-            
-            if (listOfDonors.Count < numOfCallsPerHour)
+            //if (flag == false)
+            //{
+            //    flag = true;
+            //}
+            //else
+            //{
+            //    listOfDonors.RemoveRange(0, numOfCallsPerHour);
+            //}
+
+            //if (listOfDonors.Count < numOfCallsPerHour)
                 return listOfDonors;
-            return listOfDonors.GetRange(0, numOfCallsPerHour);
-         }
+            //return listOfDonors.GetRange(0, numOfCallsPerHour);
+        }
         public bool removeDonorToEnd(int donor, string member)
         {
             Donors donorSelected;

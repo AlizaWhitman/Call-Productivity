@@ -14,13 +14,14 @@ import { interval } from 'rxjs';
   styleUrls: ['./call-session.component.css']
 })
 export class CallSessionComponent implements OnInit {
- 
- private listOfDonor: Donor[];
- private _currentMenber : Member;
- private _saveDonor: Donor;
- private _lenList: number;
-  
- donerDetailsForm: FormGroup = new FormGroup({
+
+  private listOfDonor: Donor[];
+  private SavelistOfDonor: Donor[];
+  private _currentMenber: Member;
+  private _saveDonor: Donor;
+  private _lenList: number;
+
+  donerDetailsForm: FormGroup = new FormGroup({
     id: new FormControl(),
     fullName: new FormControl(),
     password: new FormControl(),//
@@ -33,7 +34,7 @@ export class CallSessionComponent implements OnInit {
     country: new FormControl(""),
     city: new FormControl(""),
     nativeLanguage: new FormControl(""),
-    totalDonation:new FormControl(""),
+    totalDonation: new FormControl(""),
     lastDonation: new FormControl(""),
     vip: new FormControl(""),
     anashIsrael: new FormControl(""),
@@ -59,28 +60,32 @@ export class CallSessionComponent implements OnInit {
     yearsInYadYisroel: new FormControl(""),
     other: new FormControl(""),
   });
-  
 
-  constructor(private _callSessionService: CallSessionService,private _router: Router) { 
+  callback = new FormGroup({
+    minutes: new FormControl(),
+    hours: new FormControl()
+  });
+  constructor(private _callSessionService: CallSessionService, private _router: Router) {
 
   }
 
   ngOnInit() {
-    if(sessionStorage.getItem("listOfDonors")){
-    this.listOfDonor=JSON.parse(sessionStorage.getItem("listOfDonors"));
-    this.InitializeForm();
-  }
-    else{
-    this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
-    this._callSessionService.getDonorsById(this._currentMenber.fullName).subscribe((data) => {
-      this.listOfDonor = data;
-      sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor));
+    if (sessionStorage.getItem("listOfDonors")) {
+      this.listOfDonor = JSON.parse(sessionStorage.getItem("listOfDonors"));
       this.InitializeForm();
-    }, err => {
-      alert("We are having difficulties reveiving the list of donors. Please try again later.");
-    })}
-    
-  
+    }
+    else {
+      this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
+      debugger
+      this._callSessionService.getDonorsById(this._currentMenber.fullName).subscribe((data) => {
+        this.listOfDonor = data;
+        sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor));
+        this.InitializeForm();
+        debugger
+      }, err => {
+        alert("We are having difficulties reveiving the list of donors. Please try again later.");
+      })
+    }
   }
 
   // GetDonorToCall(){
@@ -88,134 +93,178 @@ export class CallSessionComponent implements OnInit {
   //   return this.listOfDonor[0][0];
   // }
 
-  ReseivedDonation(){
-    this._router.navigate(["/CallSummaryComponent",{name : this.listOfDonor[0].fullName ,dID : this.listOfDonor[0].id}])
-    //need to reset the page and to initialize with the next call
+  ReseivedDonation() {
+    debugger
+    this._router.navigate(["/CallSummaryComponent", { name: this.listOfDonor[0].fullName, dID: this.listOfDonor[0].id }])
+    this.listOfDonor.reverse();
+    this._saveDonor = this.listOfDonor.pop();
+    this.listOfDonor.reverse();
+    sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+    this.donerDetailsForm.reset();
+    this.InitializeForm();
+    debugger
+    
   }
 
-  NobodyAnswered(){
-      this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
-      this.listOfDonor.reverse();
-      debugger
-      this._saveDonor=this.listOfDonor.pop();
-      this.listOfDonor.reverse();
-      this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
-      {
+  NobodyAnswered() {
+    this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
+    this.listOfDonor.reverse();
+    this._saveDonor = this.listOfDonor.pop();
+    this.listOfDonor.reverse();
+    this.listOfDonor.push(this._saveDonor);
+    alert("The donor remove to the end of the list.");
+    sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+    this.donerDetailsForm.reset();
+    this.InitializeForm();
+    // this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
+    // {
 
-        debugger
-          if(save) {
-            sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
-            this.donerDetailsForm.reset();
-            this.InitializeForm();
-            alert("The donor remove to the end of the list.");
-          }
-          else
-          alert("Unfortunately we had trouble.");
-        }, err => {
-          alert("Unfortunately we had trouble.");
-        });
-     
-    }
+    //   debugger
+    //     if(save) {
+    //       sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
+    //       this.donerDetailsForm.reset();
+    //       this.InitializeForm();
+    // alert("The donor remove to the end of the list.");
+    // }
+    //   else
+    //   alert("Unfortunately we had trouble.");
+    // }, err => {
+    //   alert("Unfortunately we had trouble.");
+    // });
 
-  WrongNumber(){
-    this._callSessionService.deletePhoneNumber(this.listOfDonor[0].id).subscribe((save)=>
-    {
+  }
+
+  WrongNumber() {
+    this._callSessionService.deletePhoneNumber(this.listOfDonor[0].id).subscribe((save) => {
       debugger
-      if(save) {
+      if (save) {
         alert("The donor nuber phone was deleted succesfully!😊");
-        sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor)) 
-        if( this.listOfDonor.length==0)
-        {
-          debugger
-          this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
-          this._callSessionService.getDonorsById(this._currentMenber.fullName).subscribe((data) => {
-            this.listOfDonor = data;
-            sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor));
-            this.InitializeForm();
-          }, err => {
-            alert("We are having difficulties reveiving the list of donors. Please try again later.");
-          })
-        }else
-        {
-          this.listOfDonor.splice(0,1);
+        sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+        if (this.listOfDonor.length == 0) {
+          alert("You finished all what you have to do////////////")
+          this.donerDetailsForm.reset();
+          // debugger
+          // this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
+          // this._callSessionService.getDonorsById(this._currentMenber.fullName).subscribe((data) => {
+          //   this.listOfDonor = data;
+          //   sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor));
+          //   this.InitializeForm();
+          // }, err => {
+          //   alert("We are having difficulties reveiving the list of donors. Please try again later.");
+          // })
+        }
+        else {
+          this.listOfDonor.splice(0, 1);
           this.donerDetailsForm.reset();
           this.InitializeForm();
         }
       }
       else
-      alert("Unfortunately we had trouble delete the donor number phone. Please try again later.");
+        alert("Unfortunately we had trouble delete the donor number phone. Please try again later.");
     }, err => {
       alert("Unfortunately we had trouble delete the donor number phone. Please try again later.");
     });;
 
   }
 
-  CallBack(){
-    this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
+  CallBackSoon() {
     this.listOfDonor.reverse();
-    debugger
-    this._saveDonor=this.listOfDonor.pop();
+    this._saveDonor = this.listOfDonor.pop();
     this.listOfDonor.reverse();
-    this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
-    {
-
-      debugger
-        if(save) {
-          sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
-          this.donerDetailsForm.reset();
-          this.InitializeForm();
-          alert("The donor remove to the end of the list.");
-        }
-        else
-        alert("Unfortunately we had trouble.");
-      }, err => {
-        alert("Unfortunately we had trouble.");
-      });
-  }
-
-  SorryNo(){
-   this.listOfDonor.splice(0,1);
-   debugger
-   alert("The donor remove from the list")
-   if( this.listOfDonor.length==0)
-   {
-     debugger
-     this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
-     this._callSessionService.getDonorsById(this._currentMenber.fullName).subscribe((data) => {
-       this.listOfDonor = data;
-       sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor));
-       this.InitializeForm();
-     }, err => {
-       alert("We are having difficulties reveiving the list of donors. Please try again later.");
-     })
-   }
-   else
-   {
-     debugger
-    sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
-    this.InitializeForm();
-   }
-  }
-
-  NeverAgain(){
-  this._callSessionService.deleteDonor(this.listOfDonor[0].id).subscribe((save)=>
-  {
-    if(save) {
-      alert("The donor was deleted succesfully!😊");
+    if (this.listOfDonor.length < 5) {
+      this.listOfDonor.push(this._saveDonor);
+      alert("The donor will apear back in a few minutes.");
     }
-    else
-    alert("Unfortunately we had trouble delete the donor. Please try again later.");
-  }, err => {
-    alert("Unfortunately we had trouble delete the donor. Please try again later.");
-  });;
-  this.listOfDonor.splice(0,1);
-  sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
-  this.donerDetailsForm.reset();
-  this.InitializeForm();
+    else {
+      this.SavelistOfDonor = this.listOfDonor.splice(5, this.listOfDonor.length - 5)
+      this.listOfDonor.push(this._saveDonor);
+      this.SavelistOfDonor.forEach(e => {
+        this.listOfDonor.push(e)
+      });
+      alert("The donor will apear back in a few minutes...");
+    }
+    sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+    this.donerDetailsForm.reset();
+    this.InitializeForm();
+    // this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
+    // this.listOfDonor.reverse();
+    // debugger
+    // this._saveDonor = this.listOfDonor.pop();
+    // this.listOfDonor.reverse();
+    // this._callSessionService.postDonor(parseInt(this._saveDonor.id), this._currentMenber.fullName).subscribe((save) => {
+
+    //   debugger
+    //   if (save) {
+    //     sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+    //     this.donerDetailsForm.reset();
+    //     this.InitializeForm();
+    //     alert("The donor remove to the end of the list.");
+    //   }
+    //   else
+    //     alert("Unfortunately we had trouble.");
+    // }, err => {
+    //   alert("Unfortunately we had trouble.");
+    // });
+  }
+
+  CallBackLater() {
+    this.listOfDonor.reverse();
+    this._saveDonor = this.listOfDonor.pop();
+    this.listOfDonor.reverse();
+    this.listOfDonor.push(this._saveDonor);
+    alert("The donor remove to the end of the list.");
+    sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+    this.donerDetailsForm.reset();
+    this.InitializeForm();
+  }
+  SorryNo() {
+    if (this.listOfDonor.length == 0) {
+      alert("You finished all what you have to do////////////")
+      this.donerDetailsForm.reset();
+      //  debugger
+      //  this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
+      //  this._callSessionService.getDonorsById(this._currentMenber.fullName).subscribe((data) => {
+      //    this.listOfDonor = data;
+      //    sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor));
+      //    this.InitializeForm();
+      //  }, err => {
+      //    alert("We are having difficulties reveiving the list of donors. Please try again later.");
+      //  })
+
+    }
+    else {
+      debugger
+      this.listOfDonor.splice(0, 1);
+      alert("The donor remove from the list")
+      sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+      this.InitializeForm();
+    }
+  }
+
+  NeverAgain() {
+    this._callSessionService.deleteDonor(this.listOfDonor[0].id).subscribe((save) => {
+      if (save) {
+        alert("The donor was deleted succesfully!😊");
+      }
+      else
+        alert("Unfortunately we had trouble delete the donor. Please try again later.");
+    }, err => {
+      alert("Unfortunately we had trouble delete the donor. Please try again later.");
+    });;
+    this.listOfDonor.splice(0, 1);
+    if (this.listOfDonor.length == 0) {
+      alert("You finished all what you have to do////////////")
+    }
+
+    else {
+      sessionStorage.setItem("listOfDonors", JSON.stringify(this.listOfDonor))
+      this.donerDetailsForm.reset();
+      this.InitializeForm();
+    }
   }
 
   InitializeForm() {
-      this.donerDetailsForm.get('id').setValue(this.listOfDonor[0].id),
+    this.donerDetailsForm.get('id').setValue(this.listOfDonor[0].id),
       this.donerDetailsForm.get('fullName').setValue(this.listOfDonor[0].fullName),
       this.donerDetailsForm.get('password').setValue(this.listOfDonor[0].password),
       this.donerDetailsForm.get('firstName').setValue(this.listOfDonor[0].firstName),
@@ -223,7 +272,7 @@ export class CallSessionComponent implements OnInit {
       this.donerDetailsForm.get('connectionID').setValue(this.listOfDonor[0].connectionID),
       this.donerDetailsForm.get('ageGroup').setValue(this.listOfDonor[0].ageGroup),
       this.donerDetailsForm.get('email').setValue(this.listOfDonor[0].email);
-      this.donerDetailsForm.get('phoneNumber').setValue(this.listOfDonor[0].phoneNumber),
+    this.donerDetailsForm.get('phoneNumber').setValue(this.listOfDonor[0].phoneNumber),
       this.donerDetailsForm.get('country').setValue(this.listOfDonor[0].country),
       this.donerDetailsForm.get('city').setValue(this.listOfDonor[0].city),
       this.donerDetailsForm.get('nativeLanguage').setValue(this.listOfDonor[0].nativeLanguage),

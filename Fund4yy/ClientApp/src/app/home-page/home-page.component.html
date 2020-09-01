@@ -1,19 +1,25 @@
 <div class="member-details-wrap">
-	<div class="member-details-html">	
-		<div class="member-details-form">
-            <div class="group">
-                <input type="submit" class="button" value="Start Session!!! "[routerLink]="['/CallSessionComponent']">
-            </div>
-            <div class="group">
-                <input type="submit" class="button" value="Personal Details " [routerLink]="['/MemberDetailsComponent']">
-            </div>
-            <div class="group">
-                <input type="submit" class="button" value="Add New Donor "[routerLink]="['/DonorNewComponent']">
-            </div>
-		
-		</div>
-	</div>
+    <div class="member-details-html">
+        <div class="member-details-form">
+            <form [formGroup]="homePageForm">
+                <div class="group">
+					<input id="firstName" type="text" class="input" formControlName="donorName">
+				</div>
+                <div>THANK TOY FOR JOINING YAD ISRAEL!!</div>
+                <div class="group">
+                    <input type="submit" class="button" value="Start Session!!! "
+                        [routerLink]="['/CallSessionComponent']">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Personal Details "
+                        [routerLink]="['/MemberDetailsComponent']">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Add New Donor " [routerLink]="['/DonorNewComponent']">
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-
 
 

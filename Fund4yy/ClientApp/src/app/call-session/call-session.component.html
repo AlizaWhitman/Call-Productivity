@@ -1,51 +1,51 @@
 <div class="member-details-wrap">
-	<div class="member-details-html">	
+	<div class="member-details-html">
 		<div class="member-details-form">
-            <label class="member-details">Your Next Call</label>
+			<label class="member-details">Your Next Call</label>
 			<form [formGroup]="donerDetailsForm">
-			<div class="member-details-htm">
-				<div class="group">
-					<label for="firstName" class="label">First Name</label>
-					<input id="firstName" type="text" class="input" formControlName="firstName">
-				</div>
-				<div class="group">
-					<label for="lastName" class="label">Last Name</label>
-					<input id="lastName" type="text" class="input" formControlName="lastName">
-				</div>
-				<!-- <div class="group">
+				<div class="member-details-htm">
+					<div class="group">
+						<label for="firstName" class="label">First Name</label>
+						<input id="firstName" type="text" class="input" formControlName="firstName">
+					</div>
+					<div class="group">
+						<label for="lastName" class="label">Last Name</label>
+						<input id="lastName" type="text" class="input" formControlName="lastName">
+					</div>
+					<!-- <div class="group">
 					<label for="ageGroup" class="label">Age Group</label>
 					<input id="ageGroup" type="text" class="input" formControlName="ageGroup">
 				</div> -->
-				<!-- NEEDS TO BE A SELECT LIST OF THE -->
-				<div class="group">
-					<label for="email" class="label">Email</label>
-					<input id="email"  class="input" formControlName="email">
-				</div>
-				<div class="group">
-					<label for="phoneNumber" class="label">Phone Number</label>
-					<input id="phoneNumber" type="text" class="input" formControlName="phoneNumber">
-				</div>
-				<div class="group">
-					<label for="country" class="label">Country</label>
-					<input id="country" type="text" class="input" formControlName="country">
-				</div>
-				<div class="group">
-					<label for="city" class="label">City</label>
-					<input id="city" type="text" class="input" formControlName="city">
-                </div>
-                <div class="group">
-					<label for="nativeLanguage" class="label">nativeLanguage</label>
-					<input id="nativeLanguage" type="text" class="input" formControlName="nativeLanguage">
-				</div>
-                <div class="group">
-					<label for="totalDonation" type="number" class="label"> totalDonation</label>
-					<input id="totalDonation" type="number" class="input" formControlName="totalDonation">
-				</div>
-                <div class="group">
-					<label for="lastDonation" type="number" class="label"> lastDonation</label>
-					<input id="lastDonation" type="number" class="input" formControlName="lastDonation">
-                </div>
-                <!-- <div class="group">
+					<!-- NEEDS TO BE A SELECT LIST OF THE -->
+					<div class="group">
+						<label for="email" class="label">Email</label>
+						<input id="email" class="input" formControlName="email">
+					</div>
+					<div class="group">
+						<label for="phoneNumber" class="label">Phone Number</label>
+						<input id="phoneNumber" type="text" class="input" formControlName="phoneNumber">
+					</div>
+					<div class="group">
+						<label for="country" class="label">Country</label>
+						<input id="country" type="text" class="input" formControlName="country">
+					</div>
+					<div class="group">
+						<label for="city" class="label">City</label>
+						<input id="city" type="text" class="input" formControlName="city">
+					</div>
+					<div class="group">
+						<label for="nativeLanguage" class="label">nativeLanguage</label>
+						<input id="nativeLanguage" type="text" class="input" formControlName="nativeLanguage">
+					</div>
+					<div class="group">
+						<label for="totalDonation" type="number" class="label"> totalDonation</label>
+						<input id="totalDonation" type="number" class="input" formControlName="totalDonation">
+					</div>
+					<div class="group">
+						<label for="lastDonation" type="number" class="label"> lastDonation</label>
+						<input id="lastDonation" type="number" class="input" formControlName="lastDonation">
+					</div>
+					<!-- <div class="group">
 					<input id="vip" type="checkbox" class="input" class="check" formControlName="vip">
 					<label for="vip"><span class="icon"></span> vip </label>
 				</div>
@@ -138,36 +138,36 @@
 					<label for="other" class="label">Anything else you would like to share?</label>
 					<input id="other" type="text" class="input" formControlName="other">
 				</div> -->
-				<div class="hr"></div>
-				<div class="group">
-					<input type="submit" class="button" value="Reseived a donation" (click)="ReseivedDonation()">
+					<div class="hr"></div>
+					<div class="group">
+						<input type="submit" class="button" value="Reseived a donation" (click)="ReseivedDonation()">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value="Nobody answered" (click)="NobodyAnswered()">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value="Wrong number" (click)="WrongNumber()">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value='"Call me back soon!"' (click)="CallBackSoon()">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value='"Call me back later!"' (click)="CallBackLater()">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value='"Sorry, but no"' (click)="SorryNo()">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value="Never again!!!!" (click)="NeverAgain()">
+					</div>
+					<div class="foot-lnk">
+						<a [routerLink]="['/MemberDetailsComponent']">Personal Details</a>
+					</div>
+					<div class="foot-lnk">
+						<a [routerLink]="['/DonorNewComponent']">Add New Donor</a>
+					</div>
 				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Nobody answered"(click)="NobodyAnswered()">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Wrong number"(click)="WrongNumber()">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value='"Call me back!"'(click)="CallBack()">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value='"Sorry, but no"'(click)="SorryNo()">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Never again!!!!"(click)="NeverAgain()">
-				</div>
-				<div class="foot-lnk">
-					<a [routerLink]="['/MemberDetailsComponent']">Personal Details</a>
-				</div>
-				<div class="foot-lnk">
-					<a [routerLink]="['/DonorNewComponent']">Add New Donor</a>
-				</div>
-			</div>
 			</form>
 		</div>
 	</div>
 </div>
-
-
-
