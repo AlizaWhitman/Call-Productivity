@@ -1,7 +1,24 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\beryl\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Call-Productivity\\Entities\\Entities.csproj": {}
+  },
+  "projects": {
+    "C:\\Call-Productivity\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Call-Productivity\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Call-Productivity\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
+        "outputPath": "C:\\Call-Productivity\\Entities\\obj\\",
+=======
+    "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj": {}
+>>>>>>> aaa2deed59166ac4fe54c3a5afaab88930c40b99
   },
   "projects": {
     "C:\\Users\\beryl\\Desktop\\Call-Productivity\\Entities\\Entities.csproj": {
@@ -9,9 +26,16 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
         "projectName": "Entities",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\Entities\\obj\\",
+=======
+        "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\Entities\\obj\\",
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
+>>>>>>> aaa2deed59166ac4fe54c3a5afaab88930c40b99
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",

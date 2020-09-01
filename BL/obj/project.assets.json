@@ -5604,11 +5604,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\BL\\BL.csproj",
       "projectName": "BL",
       "projectPath": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\BL\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Call-Productivity\\BL\\BL.csproj",
+      "projectName": "BL",
+      "projectPath": "C:\\Call-Productivity\\BL\\BL.csproj",
+      "packagesPath": "C:\\Users\\beryl\\.nuget\\packages\\",
+      "outputPath": "C:\\Call-Productivity\\BL\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj",
+      "projectName": "BL",
+      "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\BL.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Call-Productivity\\BL\\obj\\",
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
+>>>>>>> aaa2deed59166ac4fe54c3a5afaab88930c40b99
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\beryl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5624,8 +5640,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\beryl\\Desktop\\Call-Productivity\\DL\\DL.csproj": {
               "projectPath": "C:\\Users\\beryl\\Desktop\\Call-Productivity\\DL\\DL.csproj"
+=======
+<<<<<<< HEAD
+            "C:\\Call-Productivity\\DL\\DL.csproj": {
+              "projectPath": "C:\\Call-Productivity\\DL\\DL.csproj"
+=======
+            "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\Call-Productivity\\DL\\DL.csproj"
+>>>>>>> cd91381162304994ce2c035ee175860befef9c6b
+>>>>>>> aaa2deed59166ac4fe54c3a5afaab88930c40b99
             }
           }
         }

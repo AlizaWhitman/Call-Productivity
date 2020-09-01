@@ -30,6 +30,7 @@ namespace Fund4yy
             using (var serviceScope = host.Services.CreateScope())
             {
                 var services = serviceScope.ServiceProvider;
+                int check = 0;
                 try
                 {
                     var _Connection = services.GetRequiredService<DataAccess>();
@@ -85,6 +86,8 @@ namespace Fund4yy
                                 CurrentDonor.MarriedAYYGraduate = bool.Parse(row[34].ToString());
                                 CurrentDonor.YearsInYadYisroel = Int32.Parse(row[35].ToString());
                                 List<Donors> CurrentDonorsConnectionsList;
+                                if (row[4].ToString() == null)
+                                    break;
                                 fundraisersConnection.TryGetValue(row[4].ToString(), out CurrentDonorsConnectionsList);
                                 if (CurrentDonorsConnectionsList == null)
                                 {
@@ -95,13 +98,9 @@ namespace Fund4yy
                             };
                         }
                     }
-                    foreach (var fundraiser in fundraisersConnection)
-                    {
-                        List<Donors> sortedList;
-                        fundraisersConnection.Remove(fundraiser.Key, out sortedList);
-                        sortedList = fundraiser.Value.OrderBy(donor => donor.TotalDonation).ToList();
-                        fundraisersConnection.Add(fundraiser.Key, sortedList);  
-                    }
+                    foreach (var fundraiser in fundraisersConnection.Keys.ToList())
+                        fundraisersConnection[fundraiser] = fundraisersConnection[fundraiser].OrderBy(donor => donor.TotalDonation).ToList();
+          
                     foreach (List<Donors> listOFDonors in fundraisersConnection.Values)
                     {
                         if(listOFDonors.Count > numOfCallsPerHour * hoursOfDonating)
@@ -120,10 +119,14 @@ namespace Fund4yy
                             }
 
                         }
+                        check++;
+                        if (check == fundraisersConnection.Values.Count() - 1)
+                            break;
                     }
                 }
                 catch (Exception ex)
                 {
+                    
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     logger.LogError(ex, "An error occurred.");
                 }
