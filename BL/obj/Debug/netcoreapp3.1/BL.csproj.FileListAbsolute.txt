@@ -38,3 +38,16 @@ C:\Users\User\Documents\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.csproj.C
 C:\Users\User\Documents\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.dll
 C:\Users\User\Documents\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.pdb
 C:\Users\User\Documents\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.csproj.CoreCompileInputs.cache
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\BL.deps.json
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\BL.dll
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\BL.pdb
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\DL.dll
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\DL.pdb
+C:\Users\beryl\Desktop\Call-Productivity\BL\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\beryl\Desktop\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.csprojAssemblyReference.cache
+C:\Users\beryl\Desktop\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfoInputs.cache
+C:\Users\beryl\Desktop\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfo.cs
+C:\Users\beryl\Desktop\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.csproj.CopyComplete
+C:\Users\beryl\Desktop\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.dll
+C:\Users\beryl\Desktop\Call-Productivity\BL\obj\Debug\netcoreapp3.1\BL.pdb

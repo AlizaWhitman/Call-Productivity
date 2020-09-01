@@ -32,3 +32,14 @@ C:\Users\User\Documents\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.csproj.C
 C:\Users\User\Documents\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.dll
 C:\Users\User\Documents\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.pdb
 C:\Users\User\Documents\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.csproj.CoreCompileInputs.cache
+C:\Users\beryl\Desktop\Call-Productivity\DL\bin\Debug\netcoreapp3.1\DL.deps.json
+C:\Users\beryl\Desktop\Call-Productivity\DL\bin\Debug\netcoreapp3.1\DL.dll
+C:\Users\beryl\Desktop\Call-Productivity\DL\bin\Debug\netcoreapp3.1\DL.pdb
+C:\Users\beryl\Desktop\Call-Productivity\DL\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\beryl\Desktop\Call-Productivity\DL\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\beryl\Desktop\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.csprojAssemblyReference.cache
+C:\Users\beryl\Desktop\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.AssemblyInfoInputs.cache
+C:\Users\beryl\Desktop\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.AssemblyInfo.cs
+C:\Users\beryl\Desktop\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.csproj.CopyComplete
+C:\Users\beryl\Desktop\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.dll
+C:\Users\beryl\Desktop\Call-Productivity\DL\obj\Debug\netcoreapp3.1\DL.pdb

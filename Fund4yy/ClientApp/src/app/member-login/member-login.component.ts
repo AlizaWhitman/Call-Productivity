@@ -5,6 +5,7 @@ import { Member } from '../models/member-model';
 import { Router, RouterLink } from '@angular/router';
 import { MembersService } from '../members.service';
 import { ConfirmationCode, Status } from '../models/confirmation-code-model';
+import { AuthService } from '../Authentication.service';
 
 @Component({
   selector: 'app-member-login',
@@ -22,9 +23,9 @@ export class MemberLoginComponent implements OnInit {
 
   loginForm: FormGroup = new FormGroup({
     email: new FormControl("", [Validators.required, Validators.minLength(3)]),
-    password: new FormControl("")
+    password: new FormControl(""),
+    rememberMe: new FormControl("")
   });
-
 
   SendPassword() {
     this._currentMember = new Member();
@@ -55,7 +56,6 @@ export class MemberLoginComponent implements OnInit {
 
   }
 
-
   SendConfirmation() {
     this._currentMember = new Member();
     this._currentMember.email = this._emailForConfirmation;
@@ -78,8 +78,7 @@ export class MemberLoginComponent implements OnInit {
           break;
       }
     });
-  }
-
+  }j
 
   Confirmation() {
     if (this._confirmationCode.code == this._confirmationCodeEntered) {
@@ -97,6 +96,7 @@ export class MemberLoginComponent implements OnInit {
     this._loginMember = new Member();
     this._loginMember.email = this.loginForm.value.email;
     this._loginMember.password = this.loginForm.value.password;
+    this._authenticationService.SignIn(this._loginMember.email,this._loginMember.password,this.loginForm.value.rememberMe);
     this._membersService.getMemberByEmailAndPassword(this._loginMember).subscribe(data => {
       if (data) {
         sessionStorage.setItem("currentMember", JSON.stringify(data));
@@ -114,7 +114,7 @@ export class MemberLoginComponent implements OnInit {
     )
   }
 
-  constructor(private _membersService: MembersService, private _router: Router) { }
+  constructor(private _membersService: MembersService, private _authenticationService: AuthService, private _router: Router) { }
 
   ngOnInit() {
   }

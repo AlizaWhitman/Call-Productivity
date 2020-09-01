@@ -97,9 +97,6 @@ namespace DL
             }
             return null;
         }
-
-      
-
         public Members PostMember(Members Member)
         {
             _Connection.Sheet = "Fundraisers";
@@ -125,7 +122,6 @@ namespace DL
             var appendReponse = appendRequest.Execute();
             return Member;
         }
-
         public Boolean PutMember(Members Member)
         {
             _Connection.Sheet = "Fundraisers";
@@ -146,7 +142,6 @@ namespace DL
             var appendReponse = updateRequest.Execute();
             return true;
         }
-
         public Boolean DeleteMember(int ID)
         {
             _Connection.Sheet = "Fundraisers";
@@ -157,7 +152,6 @@ namespace DL
             var appendReponse = clearRequest.Execute();
             return true;
         }
-
         public ConfirmationCode SendPassword(string Email, SendPassword Source)
         {
             _Connection.Sheet = "Fundraisers";
@@ -212,6 +206,7 @@ namespace DL
                         cd.EmailStatus = Status.EmailNotFound;
                         return cd;
                     case Entities.SendPassword.NewMember:
+                        //חיפוש למצוא את המייל אם הוא כן כבר קיים
                         Random rnd = new Random();
                         int length = 10;
                         string rndPassword = "";

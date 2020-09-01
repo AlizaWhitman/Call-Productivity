@@ -11,11 +11,12 @@ import { MemberNewComponent } from './member-new/member-new.component';
 import { MemberLoginComponent } from './member-login/member-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DonorsService } from './donors.service';
-import { CallsService } from './calls-service';
+import { CallsService } from './calls.service';
 import { MembersService } from './members.service';
 import { CallSessionComponent } from './call-session/call-session.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CallSessionService } from './call-session.service';
+import { AuthService } from './Authentication.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { CallSessionService } from './call-session.service';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [MembersService, DonorsService, CallsService, CallSessionService],
+  providers: [MembersService, DonorsService, CallsService, CallSessionService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

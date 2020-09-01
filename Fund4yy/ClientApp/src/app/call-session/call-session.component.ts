@@ -96,13 +96,12 @@ export class CallSessionComponent implements OnInit {
   NobodyAnswered(){
       this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
       this.listOfDonor.reverse();
-      debugger
+    
       this._saveDonor=this.listOfDonor.pop();
       this.listOfDonor.reverse();
       this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
       {
 
-        debugger
           if(save) {
             sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
             this.donerDetailsForm.reset();
@@ -120,7 +119,7 @@ export class CallSessionComponent implements OnInit {
   WrongNumber(){
     this._callSessionService.deletePhoneNumber(this.listOfDonor[0].id).subscribe((save)=>
     {
-      debugger
+ 
       if(save) {
         alert("The donor nuber phone was deleted succesfully!😊");
         sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor)) 
@@ -153,13 +152,13 @@ export class CallSessionComponent implements OnInit {
   CallBack(){
     this._currentMenber = JSON.parse(sessionStorage.getItem("currentMember"));
     this.listOfDonor.reverse();
-    debugger
+   
     this._saveDonor=this.listOfDonor.pop();
     this.listOfDonor.reverse();
     this._callSessionService.postDonor(parseInt(this._saveDonor.id) ,this._currentMenber.fullName).subscribe((save)=>
     {
 
-      debugger
+
         if(save) {
           sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
           this.donerDetailsForm.reset();
@@ -175,7 +174,7 @@ export class CallSessionComponent implements OnInit {
 
   SorryNo(){
    this.listOfDonor.splice(0,1);
-   debugger
+
    alert("The donor remove from the list")
    if( this.listOfDonor.length==0)
    {
@@ -191,7 +190,6 @@ export class CallSessionComponent implements OnInit {
    }
    else
    {
-     debugger
     sessionStorage.setItem("listOfDonors",JSON.stringify(this.listOfDonor))
     this.InitializeForm();
    }
